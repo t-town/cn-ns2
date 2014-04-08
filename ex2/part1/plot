@@ -1,8 +1,8 @@
 set title "TCP DropTail"
 set xlabel "Time (in s)"
 set ylabel "Throughput"
-set term pngcairo size 1400,700
+set term pngcairo size 1000,700
 set output "output.png"
-set xrange [0:65]
-plot "tp2.dat" with linespoints ls 1,\
-     "tp4.dat" with linespoints ls 1 lc rgb '#0000ff'
+set xrange [5:6]
+set key off
+plot "tp2.dat" with linespoints ls 1

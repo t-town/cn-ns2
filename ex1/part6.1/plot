@@ -6,5 +6,4 @@ set xrange [0:11]
 set output "output.png"
 #set style line 1 lc rgb '#006ad' lt 1 lw 2 pt 7 pi -1 ps 1.5
 #set pointintervalbox 3
-plot "tp1.dat" title "FTP Throughput" with linespoints ls 1,\
-	"tp7.dat" title "Upload Throughput" with linespoint ls 1 lc rgb '#0000ff'
+plot "tp8.dat" title "FTP Throughput" with linespoints ls 1

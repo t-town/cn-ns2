@@ -8,15 +8,20 @@ set nf [open /tmp/example.out.nam w]
 $ns namtrace-all $nf
 # finish procedure: flushes all simulator data to file
 
+set lf [open /tmp/example.out.log w]
+set sf [open /tmp/example.out.fs w]
+
 $ns color 1 Blue
 $ns color 7 Red
 
 proc finish {} {
     #finalise trace files
-    global ns nf tf
+    global ns nf tf lf sf
     $ns flush-trace
     close $tf
     close $nf
+    close $lf
+    close $sf
 
     #call nam visualiser
     exec nam /tmp/example.out.nam &
@@ -119,13 +124,24 @@ foreach {key value} [array get time] {
         #Set the beginning time of next transfer.
         set t [expr $t + [$RV value]]
         set size [expr [$RVsize value]]
-        $ns at $t "$ftp($key,$i) send $size"       
+        $ns at $t "$ftp($key,$i) send $size"
+        puts $sf "$t $size"
         }
 }
 
-$ns at 0.1 "$ftp32 start"
+proc writelog {} {
+   global ns lf tcp3
+   set rate 0.2
+   set now [$ns now]
+   set cwnd [$tcp3 set cwnd_]
+   set sst [$tcp3 set ssthresh_]
+   puts $lf "$now $cwnd $sst"
+   $ns at [expr $now+$rate]  "writelog"
+}
 
-$ns at 100 "finish"
+$ns at 0.0 "writelog"
+$ns at 0.1 "$ftp32 start"
+$ns at 60 "finish"
 
 #finally execute the simulator
 $ns run
