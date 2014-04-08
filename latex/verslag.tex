@@ -7,7 +7,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{float}
-\author{Tom Stappaerts - Bachelor Informatica \and Jeroen Sanders - Bachelor Informatica}
+\author{Tom Stappaerts - Bachelor Informatica  \\ Jeroen Sanders - Bachelor Informatica}
 \title{Computer Networks \& Network Simulation \\ \begin{small} Prof: Danny Hughes\end{small}}
 \begin{document}
 \maketitle
@@ -18,13 +18,13 @@
 \subsection{Question 1}
 \begin{figure}[h!]
  \centering
- \includegraphics[width = 0.8\linewidth]{./output-ex1-part1-2-5.png}
+ \includegraphics[width = 0.8\linewidth]{./output-ex1-part1-1.png}
  % output-ex1-part1-2-5.png: 700x500 pixel, 72dpi, 24.69x17.64 cm, bb=0 0 700 500
  \caption{Throughput: bandwidth limitation and download connection}
  \label{fig:Q1}
 \end{figure}
-In figure \ref{fig:Q1} we plotted the throughput the sender and receiver of the FTP application. We see that after a 'slow start' the connection stabilises on 5 Mbps.
-This is higher than what the connection of the modem can handle. Therefore we see a drop in throughput at the sender after the buffer fills up (3.5 sec). The download is limited by the strained connection between node 3 and 4.
+In figure \ref{fig:Q1} we plotted the throughput of the FTP application. We see that the connection stabilises on 4 Mbps.
+The download is limited by the strained connection between node 3 and 4.
 
 \subsection{Question 2}
 \begin{figure}[h!]
@@ -34,7 +34,8 @@ This is higher than what the connection of the modem can handle. Therefore we se
   \caption{Throughput: bandwidth limitation, download and upload connection}
  \label{fig:Q2}
 \end{figure}
-The FTP application uses all the available bandwidth. As soon as the CBR pplication starts it clogs up the network. It's packages are bigger than the tcp acknowledgement packages and it takes quite a while to upload them through the constrained upload link. That's why we see a big drop in the graph. The buffer to the FTP downloader still has some packets so they continue to arrive, as you can see in figure \ref{fig:Q1}.
+The FTP application uses all the available bandwidth. As soon as the CBR pplication starts it clogs up the network. It's packages are bigger than the tcp acknowledgement packages and it takes quite a while to upload them through the constrained upload link. Therefore we see a big drop in the graph, because the ACK-packets of the FTP-application fail to arrive. The buffer to the FTP downloader still has some packets so they continue to arrive, but no new packets are sent.
+as you can see in figure \ref{fig:Q1}.
 
 \subsection{Question 3}
 A reserved amount of upload bandwidth for each application would prevent cannibalisation of the connection. A certain throughput would be guaranteed for both applications. Initially the FTP application would behave just like in question 1. When the CBR application starts, it's bandwidth will decrease because the CBR application has it's own guaranteed bandwidth. It is expected that the CBR application would perform better. The exact amount of dropped packets for the CBR application would depend on the exact amount of available bandwidth.

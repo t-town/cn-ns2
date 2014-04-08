@@ -40,7 +40,7 @@ while ($line = <DATA>) {
 		$sum = 0;
 	}
 	#matching condition
-	if ( ($event eq 'r') && ($to eq $tonode) && ($pkttype eq 'tcp')) {
+	if ( ($event eq 'r') && ($to eq $tonode)) {
 		$sum += $pktsize;
 	}
 }

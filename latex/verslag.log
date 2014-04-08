@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.28)  2 APR 2014 17:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.28)  8 APR 2014 10:40
 entering extended mode
  %&-line parsing enabled.
 **verslag.tex
@@ -461,28 +461,28 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./output-ex1-part1-2-5.png, id=8, 702.625pt x 501.875pt>
-File: ./output-ex1-part1-2-5.png Graphic file (type png)
+<./output-ex1-part1-1.png, id=8, 702.625pt x 501.875pt>
+File: ./output-ex1-part1-1.png Graphic file (type png)
 
-<use ./output-ex1-part1-2-5.png>
-<./output-ex1-part-2-1-7.png, id=10, 702.625pt x 501.875pt>
+<use ./output-ex1-part1-1.png>
+<./output-ex1-part-2-1-7.png, id=9, 702.625pt x 501.875pt>
 File: ./output-ex1-part-2-1-7.png Graphic file (type png)
 
 <use ./output-ex1-part-2-1-7.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./ex1-part-4-1-7.png, id=11, 702.625pt x 501.875pt>
+<./ex1-part-4-1-7.png, id=10, 702.625pt x 501.875pt>
 File: ./ex1-part-4-1-7.png Graphic file (type png)
 
 <use ./ex1-part-4-1-7.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./output-ex1-part5.png, id=12, 702.625pt x 501.875pt>
+<./output-ex1-part5.png, id=11, 702.625pt x 501.875pt>
 File: ./output-ex1-part5.png Graphic file (type png)
 
-<use ./output-ex1-part5.png> [2 <./output-ex1-part1-2-5.png>]
+<use ./output-ex1-part5.png> [2 <./output-ex1-part1-1.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -490,8 +490,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [4 <./output-ex1-part5.png (PNG copy)>] (./verslag.aux) ) 
 Here is how much of TeX's memory you used:
  2784 strings out of 494684
- 33774 string characters out of 1174458
- 92251 words of memory out of 3000000
+ 33764 string characters out of 1174458
+ 92252 words of memory out of 3000000
  5962 multiletter control sequences out of 15000+50000
  9796 words of font info for 37 fonts, out of 3000000 for 9000
  260 hyphenation exceptions out of 8191
@@ -501,9 +501,9 @@ ive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/
 amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
 cmr17.pfb>
-Output written on verslag.pdf (4 pages, 167320 bytes).
+Output written on verslag.pdf (4 pages, 153234 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
