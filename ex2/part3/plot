@@ -1,0 +1,8 @@
+set title "TCP DropTail"
+set xlabel "Time (in s)"
+set ylabel "Throughput"
+set term pngcairo size 1000,700
+set output "output.png"
+set xrange [30:50]
+set key off
+plot "tp2.dat" with linespoints ls 1
