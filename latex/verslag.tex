@@ -62,10 +62,10 @@ The download is limited by the strained connection between node 3 and 4.
   \caption{Throughput: bandwidth limitation, download and upload connection}
  \label{fig:Q2}
 \end{figure}
-The FTP application uses all the available bandwidth. As soon as the CBR pplication starts it clogs up the network. It's packages are bigger than the tcp acknowledgement packages and it takes quite a while to upload them through the constrained upload link. Therefore we see a big drop in the graph, because the delivery of the FTP ACK-packets is delayed. In figure \ref{fig:Q1} we can see a sawtooth behaviour for the FTP throughput in the drop. Between the CBR packets, some ACK's of the FTP appliction get through the strained upload connection.
+The FTP application uses all the available bandwidth. As soon as the CBR pplication starts it clogs up the network. It's packages are bigger than the tcp acknowledgement packages and it takes quite a while to upload them through the constrained upload link. Therefore we see a big drop in the graph, because the delivery of the FTP ACK-packets is delayed. In figure \ref{fig:Q2} we can see a sawtooth behaviour for the FTP throughput in the drop. Between the CBR packets, some ACK's of the FTP appliction get through the strained upload connection.
 
 \subsection{Question 3}
-A reserved amount of upload bandwidth for each application would prevent cannibalisation of the connection. A certain throughput would be guaranteed for both applications. Initially the FTP application would behave just like in question 1. When the CBR application starts, it's bandwidth will decrease because the CBR application has it's own guaranteed bandwidth.
+A reserved amount of upload bandwidth for each application would prevent cannibalisation of the connection. A certain throughput would be guaranteed for both applications. Initially the FTP application would behave just like in question 1. When the CBR application starts, it's bandwidth will decrease because the CBR application has it's own guaranteed bandwidth. However, the drop in the troughput of the FTP application would not be as high.
 
 \subsection{Question 4}
 \begin{figure}[h!]
@@ -116,7 +116,7 @@ If some users always send data when the DropTail queue is full, their packets wi
 At 5s the throughput of the main FTP application drops, because of the burst connections to the 
 webserver. In figure \ref{fig:Q21} and \ref{fig:Q211} we see that the throughput does not drop
 immediately at 5s. This is because the different connections to the webserver do not start
-immediately at 5s but at randomly from 5s to 7s.
+immediately at 5s but at randomly chosen times between 5s and 7s. Only when too many connections are started and the network gets saturated the throughput drops dramatically.
 
 \subsection{Question 2}
 \begin{figure}[h!]
